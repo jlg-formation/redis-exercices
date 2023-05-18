@@ -22,6 +22,12 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'redis.clients:jedis:4.4.1'
+
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+
+    
+
 }
 
 application {

@@ -3,12 +3,22 @@
  */
 package jedis;
 
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        try (JedisPool pool = new JedisPool("localhost", 6379)) {
+            try (Jedis jedis = pool.getResource()) {
+                String key = "titi";
+                jedis.set(key, "toto");
+                String str = jedis.get(key);
+                System.out.println("str: " + str);
+            }
+        }
     }
 }
