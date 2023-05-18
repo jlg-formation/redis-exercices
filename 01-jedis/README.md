@@ -44,3 +44,7 @@ implementation 'org.slf4j:slf4j-simple:2.0.7'
 ```
 
 # Special command
+
+Using the `jedis.sendCommand` low level API allow to send any kind of command to Redis.
+
+# End
