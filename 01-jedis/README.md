@@ -42,3 +42,5 @@ To remove the SL4J warning, add in the `build.gradle`
 ```
 implementation 'org.slf4j:slf4j-simple:2.0.7'
 ```
+
+# Special command

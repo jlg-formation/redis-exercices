@@ -5,6 +5,8 @@ package jedis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.Protocol.Command;
+import redis.clients.jedis.util.SafeEncoder;
 
 public class App {
     public String getGreeting() {
@@ -18,6 +20,13 @@ public class App {
                 jedis.set(key, "toto");
                 String str = jedis.get(key);
                 System.out.println("str: " + str);
+
+                String command = "SET";
+
+                jedis.sendCommand(Command.valueOf(command.trim().toUpperCase()), key, "tutu");
+
+                Object response = jedis.sendCommand(Command.valueOf("GET"), key);
+                System.out.println("str2: " + SafeEncoder.encode((byte[]) response));
             }
         }
     }
