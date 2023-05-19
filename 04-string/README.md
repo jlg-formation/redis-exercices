@@ -76,3 +76,8 @@ Caching with or without TTL:
 - SQL Request
 - URL Request
 - Session object
+
+## Questions
+
+1. What is the max size for the key in redis?
+2. What is the max size for a string value in redis?
