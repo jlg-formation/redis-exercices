@@ -30,3 +30,15 @@ function restore <dump>
 function list
 function flush
 ```
+
+## Kill
+
+```
+fcall sleep 0 20
+```
+
+In another `redis-cli`
+
+```
+function kill
+```
