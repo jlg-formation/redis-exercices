@@ -18,6 +18,7 @@ by score.
 6. How I list all the items of a sorted set?
 7. How I count all the items with score between X stritcly and Y included in a
    sorted set?
+8. What are the prefix of each sorted set command?
 
 ## Use case
 
