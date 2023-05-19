@@ -42,3 +42,17 @@ In another `redis-cli`
 ```
 function kill
 ```
+
+## Statitics
+
+Run the sleep function and in parallel, run a `function stats`.
+
+```
+fcall sleep 0 20
+```
+
+In another `redis-cli`
+
+```
+function stats
+```
