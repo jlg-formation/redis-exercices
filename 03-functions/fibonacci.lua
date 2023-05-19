@@ -1,5 +1,11 @@
 #!lua name=jlg
 
+-- @description This function set to the key a list containing the first N elements of the fibonacci sequence.
+-- Parameters:
+--   key: The key to increment
+--   length: the first N elements to add to the list
+-- Returns:
+--   length
 local function fibonacci(keys, args)
     local key = keys[1]
     local length = tonumber(args[1])
@@ -30,5 +36,9 @@ local function fibonacci(keys, args)
     return length
 end
 
-redis.register_function('fibonacci', fibonacci)
+redis.register_function({
+    function_name = 'fibonacci',
+    callback = fibonacci,
+    description = 'set a key with a list containing the fibonacci sequence with N elements'
+})
 

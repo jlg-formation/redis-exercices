@@ -30,4 +30,9 @@ local function lrevrange(keys, args)
     return result
 end
 
-redis.register_function('lrevrange', lrevrange)
+redis.register_function({
+    function_name = 'lrevrange',
+    callback = lrevrange,
+    description = 'FCALL LREVRANGE 1 <key> <start> <stop>',
+    flags = {'no-writes'}
+})

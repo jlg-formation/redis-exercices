@@ -1,0 +1,31 @@
+# Redis String
+
+
+## Introduction
+
+```
+redis-cli
+```
+
+CRUD on keys
+
+```
+keys *
+set titi toto
+keys *
+get titi
+del titi
+keys *
+```
+
+## Exercices
+
+### Adding a TTL to a key
+
+```
+keys *
+set titi toto EX 30
+keys *
+// wait 30s
+keys *
+```
