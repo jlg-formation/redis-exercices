@@ -19,6 +19,15 @@ keys *
 
 Note: to pop a key, use GETDEL
 
+## Questions
+
+1. What is the max size for the key in redis?
+2. What is the max size for a string value in redis?
+3. How to create a key with a string?
+4. How to get the key value?
+5. How to create a counter?
+6. How to add a TTL after creating a key?
+
 ## Exercices
 
 ### Adding a TTL to a key
@@ -76,8 +85,3 @@ Caching with or without TTL:
 - SQL Request
 - URL Request
 - Session object
-
-## Questions
-
-1. What is the max size for the key in redis?
-2. What is the max size for a string value in redis?
