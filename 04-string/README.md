@@ -17,6 +17,8 @@ del titi
 keys *
 ```
 
+Note: to pop a key, use GETDEL
+
 ## Exercices
 
 ### Adding a TTL to a key
@@ -61,4 +63,8 @@ set titi toto
 append titi tutu
 ```
 
-No command allow prefixing.
+Note : no command allows prefixing.
+
+SUBSTR is replaced by GETRANGE
+
+STRLEN to get the string length
