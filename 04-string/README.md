@@ -68,3 +68,11 @@ Note : no command allows prefixing.
 SUBSTR is replaced by GETRANGE
 
 STRLEN to get the string length
+
+## Use case
+
+Caching with or without TTL:
+
+- SQL Request
+- URL Request
+- Session object
