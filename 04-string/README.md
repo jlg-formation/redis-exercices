@@ -1,0 +1,64 @@
+# Redis String
+
+## Introduction
+
+```
+redis-cli
+```
+
+CRUD on keys
+
+```
+keys *
+set titi toto
+keys *
+get titi
+del titi
+keys *
+```
+
+## Exercices
+
+### Adding a TTL to a key
+
+```
+flushdb
+keys *
+set titi toto EX 30
+keys *
+ttl titi
+ttl titi
+ttl titi
+// wait 30s
+set titi tutu KEEPTTL
+// the KEEPTTL option do not reset the TTL
+keys *
+```
+
+### Counter
+
+```
+incr counter
+incr counter
+incr counter
+decr counter
+get counter
+incrby counter 10
+decrby counter 5
+```
+
+Note: counter needs to be an integer to work well with `incr`, `decr`, etc.
+
+```
+incrbyfloat counter 0.5
+incrbyfloat counter -0.5
+```
+
+### Manipulating the string content
+
+```
+set titi toto
+append titi tutu
+```
+
+No command allow prefixing.
