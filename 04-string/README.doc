@@ -23,9 +23,25 @@ keys *
 ### Adding a TTL to a key
 
 ```
+flushdb
 keys *
 set titi toto EX 30
 keys *
+ttl titi
+ttl titi
+ttl titi
 // wait 30s
 keys *
 ```
+
+### Counter
+
+```
+incr counter 
+incr counter 
+incr counter 
+incr counter 
+get counter
+```
+
+### 
