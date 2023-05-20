@@ -5,7 +5,7 @@ calc() { awk "BEGIN { print $*}"; }
 echo "FLUSHDB" | redis-cli 
 
 getRandomAmount() {
-    r=$(calc ${RANDOM}%1000-500)
+    r=$(calc ${RANDOM}%1000)
     calc ${r}/100
 }
 
