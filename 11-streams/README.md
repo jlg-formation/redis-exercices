@@ -4,8 +4,7 @@ Redis>5.0
 
 ## Introduction
 
-Redis allows process to log info inside a stream. In parallel, Redis allows
-other processes to read log info from the stream.
+A stream is a sequence of entries. An stream entry is composed of an ID and a message content structured like a hash object (set of key value pairs).
 
 ## Use cases
 
@@ -51,6 +50,15 @@ XREAD BLOCK 0 STREAMS truck:1 <last-id>
 
 ```
 
+## Consumer Group
+
+Consumer group can be created on a stream, and removed.
+Consumer group are a set of consumers. So a consumer can be added to or removed from a consumer group.
+Consumer can read stream entry. This make them pending. Then consumer can acknewlegde stream entry.
+A consumer can claim pending entries that have reached a timeout.
+
+See the Github project : https://jlg-formation.github.io/webdis-client/
+
 ## Questions
 
 1. How we get the length of a stream?
@@ -58,7 +66,10 @@ XREAD BLOCK 0 STREAMS truck:1 <last-id>
 3. How to get the full content of a given stream?
 4. Is there an SCAN command for stream? Is no, how we scan a stream?
 5. Is there a command to give the stream in reverse?
-
-```
-
-```
+6. How to add a consumer group to a stream ?
+7. How to destroy a consumer group to a stream ?
+8. How to get the pending stream entry of a consumer group ?
+9. How to create a consumer ?
+10. How to destroy a consumer ?
+11. How to claim one pending stream entry from a consumer group that have reache 10s of timeout ?
+12. How to read a stream entry as a consumer inside a consumer group and thus making it pending ?
