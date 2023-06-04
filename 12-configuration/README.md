@@ -31,3 +31,6 @@ You will see the `/etc/redis/redis.conf` file used for configuring the redis-ser
 3. How to start a server in background task mode?
 4. How to start a server that listen only the loopback interface 127.0.0.1?
 5. Can we shutdown a redis server from a client using another network interface than the loopback interface?
+6. What is the command to get the value of a redis.conf parameter?
+7. What is the command to set the value of a redis.conf parameter?
+8. Can we change the port of a redis instance without restarting it? How?
