@@ -83,6 +83,12 @@ ACL CAT
 ACL CAT write
 ```
 
+## Connect with redis-cli as a user
+
+```
+redis-cli -u redis://alice:toto@127.0.0.1
+```
+
 ## Questions
 
 1. How to create a new user in Redis?
