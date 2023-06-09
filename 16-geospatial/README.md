@@ -44,6 +44,17 @@ GEOSEARCH <key> FROMLONLAT <longitude> <latitude> BYRADIUS <length> km WITHDIST
 GEOSEARCH <key> FROMLONLAT <longitude> <latitude> BYBOX <width> <height> km WITHDIST
 ```
 
+## Geohash string
+
+Encoding via a string of a location (longitude and latitude)
+In France with 11 characters alphanumeric we can encode a location with less than 1m of precision.
+
+https://en.wikipedia.org/wiki/Geohash
+
+```
+GEOHASH titi chezmoi
+```
+
 ## Exercices
 
 - How work the BYBOX settings? What is the width, length? Where is the <longitude> <latitude> in the rectangle?
