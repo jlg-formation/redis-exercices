@@ -57,4 +57,5 @@ GEOHASH titi chezmoi
 
 ## Exercices
 
-- How work the BYBOX settings? What is the width, length? Where is the <longitude> <latitude> in the rectangle?
+- How works the BYBOX settings? What is the width, length? Where is the <longitude> <latitude> in the rectangle?
+- How to search inside a polygon using geohash?
