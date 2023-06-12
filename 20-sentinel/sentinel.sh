@@ -36,6 +36,21 @@ clear() {
     rm -f *.conf
 }
 
+sentstart() {
+    cat > redis-sentinel-1.conf <<EOF
+port 45000
+daemonize yes
+sentinel monitor mymaster 127.0.0.1 35000 2
+sentinel down-after-milliseconds mymaster 3000
+sentinel failover-timeout mymaster 6000
+sentinel parallel-syncs mymaster 1
+EOF
+}
+
+sentstop() {
+    redis-cli -p 35000 shutdown nosave || echo
+}
+
 help() {
     cat <<EOF
 $0 start|stop
@@ -43,6 +58,8 @@ $0 start|stop
 start: Start 1 master and 2 replicas
 stop: stop all redis instances
 clear: Erase all generated files (*.conf, etc.)
+
+sentstart: Start 3 sentinels
 EOF
 }
 
