@@ -64,6 +64,20 @@ sudo  tcpdump -A -i lo port 7000
 
 See that every seconds, there is activity on the socket.
 
+### Spy with tcpflow
+
+`tcpflow` is better than `tcpdump` in developer experience. You can forget the datagram tcp header and see only the flushed info on the socket.
+
+```
+sudo apt-get update
+sudo apt-get install tcpflow
+tcpflow --version
+```
+
+```
+sudo tcpflow -i lo port 6379
+```
+
 ### Spy a initial full sync of a replica
 
 Start a fresh master.
