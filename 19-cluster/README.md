@@ -83,6 +83,8 @@ Clean all files:
 ./create-cluster.sh clean
 ```
 
+Command to get all the keys of the cluster:
+
 ```
 redis-cli --cluster call 127.0.0.1:30001 keys "*"
 ```
