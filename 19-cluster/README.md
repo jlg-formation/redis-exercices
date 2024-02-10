@@ -53,10 +53,14 @@ If a key has `/\{.+\}/` regex then the string `S ` used to compute the hash slot
 
 ## Tutorial
 
-use the `create-cluster.sh` script to play with cluser:
+use the `0x-<name>.sh` scripts to play with cluser:
 
 ```
-./create-cluster.sh
+./01-start-nodes.sh
+./02-make-cluster.sh
+./03-test-cluster.sh
+./04-stop-nodes.sh
+./05-clean.sh
 ```
 
 Start fresh nodes not in cluster:
