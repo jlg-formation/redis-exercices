@@ -2,3 +2,5 @@
 *.aof
 *.log
 appendonlydir*
+
+tcpflow.data

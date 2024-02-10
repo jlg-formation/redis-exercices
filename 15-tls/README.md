@@ -37,16 +37,30 @@ port 0
 tls-port 7000
 daemonize yes
 
-tls-cert-file ../tests/tls/server.crt
-tls-key-file ../tests/tls/server.key
-tls-ca-cert-file ../tests/tls/ca.crt
+tls-cert-file ../path/to/server.crt
+tls-key-file ../path/to/server.key
+tls-ca-cert-file ../path/to/ca.crt
 ```
 
 ## Connect a client to redis
 
 ```
 redis-cli -p 7000 --tls \
-    --cert ../tests/tls/client.crt \
-    --key ../tests/tls/client.key \
-    --cacert ../tests/tls/ca.crt
+    --cert ../path/to/client.crt \
+    --key ../path/to/client.key \
+    --cacert ../path/to/ca.crt
+```
+
+### Spy with tcpflow
+
+`tcpflow` is better than `tcpdump` in developer experience. You can forget the datagram tcp header and see only the flushed info on the socket.
+
+```
+sudo apt-get update
+sudo apt-get install tcpflow
+tcpflow --version
+```
+
+```
+sudo tcpflow -i lo port 7000
 ```
